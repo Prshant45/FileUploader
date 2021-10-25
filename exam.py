@@ -159,6 +159,7 @@ class GStorageUploaderCreator(UploaderCreator):
         return s3_list_extension
 
 def get_storage_config() -> dict:
+    """get storage configuration."""
     s3 = S3UploaderCreator()
     gstorage = GStorageUploaderCreator()
     storages = {'s3': [s3.get_file_config(), s3.get_object()],
@@ -167,20 +168,20 @@ def get_storage_config() -> dict:
     return storages
 
 def upload_files(path: pathlib.Path,storages: dict) -> bool:
+    """upload the files in respective storage."""
     for abs_path, current_dir, curr_dir_files in os.walk(path):
         for current_file in curr_dir_files:
             extension = os.path.splitext(current_file)[1]
             if extension in storages['s3'][0]:
                 
                 storages['s3'][1].upload(os.path.join(abs_path, current_file))
-            #elif extension in storages['g_storage'][0]:
-            #    storages['g_storage'][1].upload(os.path.join(current_dir, current_file))
+            elif extension in storages['g_storage'][0]:
+                storages['g_storage'][1].upload(os.path.join(current_dir, current_file))
     return True
 
 
 def main():
-    #path = input("Please enter the path of files that need to be uploaded: ")
-    path = 'D:\OneDrive - Persistent Systems Limited\Desktop\exam\json'
+    path = input("Please enter the path of files that need to be uploaded: ")
     storages = get_storage_config()
     if upload_files(path, storages):
         print("uploaded successfully")
