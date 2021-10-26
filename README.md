@@ -1,4 +1,4 @@
-pre-requistic:
+**Pre-requisite:**
 1. you can set the env variable or change the values of s3_cred.txt or gcloud_cred.txt with actual value for s3 bucket and Google Storage
 2. If you are setting the env variable for google storage set the name of variable as GOOGLE_STORAGE_CREDENTIALS and value as 
 
@@ -22,10 +22,11 @@ pre-requistic:
 			"bucket_name": "uipath-test-xlsx"
 		}
 		(Note: change the value with actual value before using it )
+
 4. You can give file type configuration file at runtime or you can use default settings set in the s3_file.txt(you can modify as per your need) or g_file.txt(you can modify as per your need)
 
 
-Project setting:
+**Project setting:**
 1. To create the virtual env, run below command in the prompt
 	python -m venv env
 2. activate the virtual env
@@ -36,6 +37,7 @@ Project setting:
 4. to run:
 	python main.py
 
-To run pytest:
-run below command to check coverage and test-xlsx
+**To run pytest:**
+run below command to check coverage and test
+
 coverage run --source=exam -m pytest -v . && coverage report -m
