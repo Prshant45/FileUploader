@@ -16,6 +16,7 @@
 		(Note: change the value with actual value before using it )
 
 3. If you are setting the env variable for s3 bucket set the name of variable as S3_CREDENTIALS and value as 
+
 		{
 			"aws_access_key_id": "aws_access_key_id",
 			"aws_secret_access_key": "aws_secret_access_key",
@@ -27,6 +28,7 @@
 
 
 **Project setting:**
+
 1. To create the virtual env, run below command in the prompt
 	python -m venv env
 2. activate the virtual env
@@ -38,6 +40,7 @@
 	python main.py
 
 **To run pytest:**
+
 run below command to check coverage and test
 
 coverage run --source=exam -m pytest -v . && coverage report -m
