@@ -1,6 +1,7 @@
 pre-requistic:
 1. you can set the env variable or change the values of s3_cred.txt or gcloud_cred.txt with actual value for s3 bucket and Google Storage
 2. If you are setting the env variable for google storage set the name of variable as GOOGLE_STORAGE_CREDENTIALS and value as 
+
 		{
 		"json_auth":{
 					"type": "service_account",
@@ -13,6 +14,7 @@ pre-requistic:
 		"bucket_name":"bucket_name"
 		}
 		(Note: change the value with actual value before using it )
+
 3. If you are setting the env variable for s3 bucket set the name of variable as S3_CREDENTIALS and value as 
 		{
 			"aws_access_key_id": "aws_access_key_id",
