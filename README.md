@@ -15,8 +15,8 @@ pre-requistic:
 		(Note: change the value with actual value before using it )
 3. If you are setting the env variable for s3 bucket set the name of variable as S3_CREDENTIALS and value as 
 		{
-			"aws_access_key_id": "AKIATQYSOKESIJH3AIEJ",
-			"aws_secret_access_key": "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",
+			"aws_access_key_id": "aws_access_key_id",
+			"aws_secret_access_key": "aws_secret_access_key",
 			"bucket_name": "uipath-test-xlsx"
 		}
 		(Note: change the value with actual value before using it )
